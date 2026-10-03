@@ -30,21 +30,23 @@ const Footer = (props) => {
 }
 
 const App = () => {
-  const course = 'CSIT340 - Information Technology'
-  const parts = [
-    {
-      name: 'CSIT340 - Industry Elective',
-      units: 3
-    },
-    {
-      name: 'CSIT327 - Information Manaagement 2',
-      units: 3
-    },
-    {
-      name: 'IT317 - Project Management for IT',
-      units: 3
-    }
-  ]
+  const course = {
+    name: 'Information Technology',
+    parts: [
+      {
+        name: 'CSIT340 - Industry Elective',
+        units: 3
+      },
+      {
+        name: 'CSIT327 - Information Manaagement 2',
+        units: 3
+      },
+      {
+        name: 'IT317 - Project Management for IT',
+        units: 3
+      }
+    ]
+  }
 
   const fullName = 'Raul Marconi P. Mondido'
   const courseCode = 'CSIT340'
@@ -52,9 +54,9 @@ const App = () => {
 
   return (
     <div>
-      <Header course={course} />
-      <Content parts={parts} />
-      <Total parts={parts} />
+      <Header course={course.name} />
+      <Content parts={course.parts} />
+      <Total parts={course.parts} />
       <Footer fullName={fullName} courseCode={courseCode} section={section} />
     </div>
   )
